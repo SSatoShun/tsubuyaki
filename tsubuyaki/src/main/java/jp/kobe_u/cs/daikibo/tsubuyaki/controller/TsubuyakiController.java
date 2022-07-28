@@ -50,6 +50,7 @@ public class TsubuyakiController {
         //フォームからエンティティに移し替え
         List<Tsubuyaki> list = ts.getSearchTsubuyaki(form.keyword);
         model.addAttribute("searchList", list);
+        model.addAttribute("list_len", list.size());
         // Tsubuyaki t = new Tsubuyaki();
         // t.setName(form.keyword());
         // t.setComment(form.getComment());
