@@ -29,4 +29,11 @@ public class TsubuyakiService {
         found.forEach(list::add);
         return list;
     }
+
+    public List<Tsubuyaki> getSearchTsubuyaki(String keyword){
+        Iterable<Tsubuyaki> found = repo.findByCommentLike(keyword);
+        ArrayList<Tsubuyaki> list = new ArrayList<>();
+        found.forEach(list::add);
+        return list;
+    }
 }

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>みんなのつぶやき</title>
+</head>
+<body>
+    <h1>みんなのつぶやき</h1>
+    <ul>
+        <li th:each="s: ${searchList}">
+            [[${s.comment}]] -- [[${s.name}]] on [[${s.createdAt}]]
+        </li>
+    </ul>
+    <h2>タイトルへ</h2>
+    <a th:href="@{/}">戻る</a>
+</body>
+</html>
