@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 import jp.kobe_u.cs.daikibo.tsubuyaki.entity.Tsubuyaki;
 @Repository
 public interface TsubuyakiRepository extends CrudRepository<Tsubuyaki,Long>{
-    List<Tsubuyaki> findByCommentLike(String comment);
+    List<Tsubuyaki> findTsubuyakiByCommentContaining(String comment);
 }
